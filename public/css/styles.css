@@ -1,6 +1,391 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* =========================
+   General Styles
+========================= */
+:root {
+  --primary-color: #0074d9;
+  --secondary-color: #f4f4f4;
+  --accent-color: #111;
+  --heading-font: "Times New Roman", serif;
+  --body-font: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  margin: 0.5em 0;
+}
+
+#wrapper {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1em;
+}
+
+/* =========================
+   Hero Section
+========================= */
+#hero {
+  background: url("/images/vehicles/delorean.jpg") no-repeat center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+#hero ul {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#hero li {
+  margin: 0.5em 0;
+}
+
+#actionbtn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* =========================
+   Reviews Section
+========================= */
+#reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+#reviews li {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Features / Upgrades
+========================= */
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 cards per row */
+  gap: 1.5em;
+  justify-items: center;
+  /* center cards in each grid cell */
+  margin-bottom: 2em;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.card figcaption {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* =========================
+   Responsive Layout
+========================= */
+@media (min-width: 768px) {
+  #hero ul {
+    font-size: 1.2rem;
+  }
+
+  /* On larger screens, keep 2 cards per row */
+  .flex-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* On small screens, stack cards 1 per row */
+  .flex-container {
+    grid-template-columns: 1fr;
+  }
+}/* =========================
+   General Styles
+========================= */
+:root {
+  --primary-color: #0074d9;
+  --secondary-color: #f4f4f4;
+  --accent-color: #111;
+  --heading-font: "Times New Roman", serif;
+  --body-font: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--accent-color);
+}
+
+/* header.ejs */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteName {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+#tools {
+  font-size: 3.5vw;
+  font-variant: small-caps;
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+}
+
+#tools a {
+  font-size: 1rem;
+}
+
+header>img {
+  max-width: 40%;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary-text);
+  display: inline-block;
+  padding: 2vh 0;
+}
+
+/* navigation.ejs */
+nav {
+  background-color: var(--primary-text);
+  color: var(--primary-background);
+}
+
+nav ul {
+  display: flex;
+  padding: 0 1vw;
+  justify-content: space-around;
+}
+
+nav li {
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  margin: 0.5em 0;
+}
+
+#wrapper {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1em;
+}
+
+/* =========================
+   Hero Section
+========================= */
+/* index.ejs */
+#hero {
+  background-image: url("/images/vehicles/delorean.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+#hero h2 {
+  margin-left: 0;
+}
+
+#hero a:hover {
+  opacity: 0.5;
+}
+
+#hero li {
+  list-style: none;
+  color: var(--main-accent);
+}
+
+#hero li h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--main-accent);
+}
+
+#hero ul {
+  padding-left: 0;
+  margin-top: 0;
+  max-width: 200px;
+  margin-left: 0.5em;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#hero li {
+  font-size: 0.85em;
+}
+
+#actionbtn {
+  display: inline-block;
+  max-width: 25vw;
+  max-height: 10vh;
+  padding: 0.5rem;
+  background-color: var(--main-accent);
+  color: var(--primary-text);
+  font-weight: 800;
+  border-radius: 0.25rem;
+}
+
+#actionbtn:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   Reviews Section
+========================= */
+#reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+#reviews li {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Features / Upgrades
+========================= */
+#reviews,
+#features {
+  margin-top: 2em;
+}
+
+#reviews,
+#features h2 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#features .flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 180px;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+/* =========================
+   Layout Wrappers
+========================= */
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2em;
+  align-items: flex-start;
+  margin-top: 2em;
+}
+
+#reviews,
+#features {
+  flex: 1;
+}
+
+/* =========================
+   Responsive Layout
+========================= */
+@media (max-width: 768px) {
+
+  /* Hero stacks */
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .motor-image img {
+    max-width: 250px;
+  }
+
+  /* Reviews + Features stack */
+  .flex-container {
+    flex-direction: column;
+  }
+
+
 }
