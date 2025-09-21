@@ -1,109 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1>Welcome to CSE Motors!</h1>
+<section id="hero">
+    <ul>
+        <li>
+            <h2>DMC Delorean</h2>
+        </li>
+        <li>3 Cup holders</li>
+        <li>Superman doors</li>
+        <li>Fuzzy dice!</li>
+        <li><button id="actionbtn">Own Today</button></li>
+    </ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %> | CSA 340 App
-    </title>
-    <link rel="stylesheet" href="/styles/styles4.css">
-    <link rel="icon" type="/images/.png" href="/images/site/favicon-32x32.png">
-</head>
+    <div class="motor-image">
+        <img src="/images/vehicles/delorean.jpg" alt="DMC Delorean">
+    </div>
+</section>
 
-<body>
-    <header id="top-header">
-        <span class="siteName">
-            <a href="/" title="Return to Home page">CSE Motors</a>
-        </span>
-        <div id="tools">
-            <a title="Click to log in" href="/account/login">My Account</a>
-        </div>
-    </header>
-    <nav>
+<div class="flex-container">
+    <section id="reviews">
+        <h2>DMC Delorean review</h2>
         <ul>
-            <li>Home</li>
-            <li>Custom</li>
-            <li>Sedan</li>
-            <li>SUV</li>
-            <li>Truck</li>
+            <li>"So fast is almost like travelling in time" (4/5)</li>
+            <li>"Coolest ride on the road" (5/5)</li>
+            <li>"Am feeling Mcfly" (5/5)</li>
+            <li>"The most futuristic ride of our day" (4.5/5)</li>
+            <li>"80's living and I love it" (5/5)</li>
         </ul>
-    </nav>
-    <main>
-        <h1>Welcome to CSE Motors!</h1>
-        <section id="hero">
-            <ul>
-                <li>
-                    <h2>DMC Delorean</h2>
-                </li>
-                <li>3 Cup holders</li>
-                <li>Superman doors</li>
-                <li>Fuzzy dice!</li>
-                <li><button id="actionbtn">Own Today</button></li>
-            </ul>
+    </section>
 
-            <div class="motor-image">
-                <img src="images/sudan.jpg" alt="Car Image">
-            </div>
-        </section>
-
-        <div class="flex-container">
-            <section id="reviews">
-                <h2>DMC Delorean review</h2>
-                <ul>
-                    <li>"So fast is almost like travelling in time" (4/5)</li>
-                    <li>"Coolest ride on the road" (5/5)</li>
-                    <li>"Am feeling Mcfly" (5/5)</li>
-                    <li>"The most futuristic ride of our day" (4.5/5)</li>
-                    <li>"80's living and I love it" (5/5)</li>
-                </ul>
-            </section>
-
-            <section id="features">
-                <h2>Delorean Upgrades</h2>
-                <div class="flex">
-                    <a href="#" title="flux-capacitor">
-                        <figure>
-                            <div class="card">
-                                <img src="flux.jpg" alt="Flux Capacitor">
-                            </div>
-                            <figcaption>Flux Capacitor</figcaption>
-                        </figure>
-                    </a>
-                    <a href="#" title="flame-decol">
-                        <figure>
-                            <div class="card">
-                                <img src="flame.jpg" alt="Flame Decol">
-                            </div>
-                            <figcaption>Flame Decol</figcaption>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="flex">
-                    <a href="#" title="bumper-sticker">
-                        <figure>
-                            <div class="card">
-                                <img src="sticker.jpg" alt="Bumper Sticker">
-                            </div>
-                            <figcaption>Bumper Sticker</figcaption>
-                        </figure>
-                    </a>
-                    <a href="#" title="hub-caps">
-                        <figure>
-                            <div class="card">
-                                <img src="hubcaps.jpg" alt="Hub Caps">
-                            </div>
-                            <figcaption>Hub Caps</figcaption>
-                        </figure>
-                    </a>
-                </div>
-            </section>
-
+    <section id="features">
+        <h2>Delorean Upgrades</h2>
+        <div class="flex">
+            <a href="#" title="flux-capacitor">
+                <figure>
+                    <div class="card">
+                        <img src="./images/upgrades/flux-cap.png" alt="Flux-Capacitor">
+                    </div>
+                    <figcaption>Flux Capacitor</figcaption>
+                </figure>
+            </a>
+            <a href="#" title="flame-decol">
+                <figure>
+                    <div class="card">
+                        <img src="flame.jpg" alt="Flame Decol">
+                    </div>
+                    <figcaption>Flame Decol</figcaption>
+                </figure>
+            </a>
         </div>
-    </main>
 
-</body>
+        <div class="flex">
+            <a href="#" title="bumper-sticker">
+                <figure>
+                    <div class="card">
+                        <img src="./images/upgrades/bumper_sticker.jpg" alt="Bumper_Sticker">
+                    </div>
+                    <figcaption>Bumper Sticker</figcaption>
+                </figure>
+            </a>
+            <a href="#" title="hub-caps">
+                <figure>
+                    <div class="card">
+                        <img src="./images/upgrades/hub-cap.jpg" alt="Hub Caps">
+                    </div>
+                    <figcaption>Hub Caps</figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+</div>
 
-</html>
+
+
+
